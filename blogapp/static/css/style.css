@@ -1,0 +1,55 @@
+
+.navbackground{
+    background-color: #e44d3a;
+}
+.nav-link{
+    padding: 0 !important;
+}
+.blog{
+    font-family: fantasy;
+    font-size: 40px;
+}
+
+.profile-pic{
+    height: 6rem;
+    background-color: #e44d3a;
+}
+.blank{
+    height: 3rem;
+}
+.left-section{
+    position: sticky;
+    top: 6rem;
+}
+.left-section li{
+    text-align: center;
+}
+.bkg-line{
+   height: .3rem;
+   width: 100%;
+    background-color: #e44d3a;
+}
+.middle-section button{
+    background-color: #e44d3a;
+    color: white;
+    border: none;
+    width: 25%;
+    height: 2rem;
+    border-radius: 5%;
+}
+.middle-section button:hover{
+    color: #e44d3a;
+    border: 1px solid #e44d3a;
+    background-color: white;
+}
+
+
+.posts img{
+    /* width: 80%; */
+
+}
+.send-com{
+    position: relative;
+    right: 2rem;
+    top: 0.4rem;
+}

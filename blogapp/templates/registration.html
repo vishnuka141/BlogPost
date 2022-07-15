@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ {%if messages%}
+        {%for msg in messages%}
+          {%if msg.level == DEFAULT_MESSAGE_LEVELS.ERROR%}
+    {{msg}}
+    {%endif%}
+     {% endfor %}
+      {% endif %}
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+
+</body>
+</html>
