@@ -78,6 +78,8 @@ class IndexView(CreateView):
 
 
 
+
+
 @signin_required
 def signout(request,*args,**kwargs):
     logout(request)
@@ -95,6 +97,7 @@ class CreateUserProfileView(CreateView):
         messages.success(self.request,"profile has been created")
         self.object=form.save()
         return  super().form_valid(form)
+
 
 @method_decorator(signin_required,name="dispatch")
 class ViewProfileView(TemplateView):
@@ -156,9 +159,20 @@ def add_comment(request,*args,**kwargs):
         messages.success(request,"you are commented to this post")
         return redirect("home")
 
+
+
 def add_like(request,*args,**kwargs):
     blog_id=kwargs.get("post_id")
     blog=Blog.objects.get(id=blog_id)
     blog.liked_by.add(request.user)
     blog.save()
+    return redirect("home")
+
+def follow_friend(request,*args,**kwargs):
+    friend_id=kwargs.get("user_id")
+    friend_profile=User.objects.get(id=friend_id)
+    request.user.users.following.add(friend_profile)
+
+
+    messages.success(request,"you are started following "+friend_profile.username)
     return redirect("home")

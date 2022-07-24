@@ -1,10 +1,20 @@
 
 .navbackground{
-    background-color: #e44d3a;
+  background: rgb(43,174,237);
+background: linear-gradient(90deg, rgba(43,174,237,1) 0%, rgba(63,60,221,1) 100%);
+  height:auto;
 }
 .nav-link{
     padding: 0 !important;
 }
+nav i{
+    background:#ffffffbf;
+    border-radius: 50%;
+    border: 12px solid #2baeed17;
+    color:blue ;
+    font-size: 1.4rem;
+}
+
 .blog{
     font-family: fantasy;
     font-size: 40px;
@@ -12,7 +22,8 @@
 
 .profile-pic{
     height: 6rem;
-    background-color: #e44d3a;
+    background: rgb(43,174,237);
+background: linear-gradient(90deg, rgba(43,174,237,1) 0%, rgba(63,60,221,1) 100%);
 }
 .blank{
     height: 3rem;
@@ -27,25 +38,26 @@
 .bkg-line{
    height: .3rem;
    width: 100%;
-    background-color: #e44d3a;
+    background: rgb(43,174,237);
+    background: linear-gradient(90deg, rgba(43,174,237,1) 0%, rgba(63,60,221,1) 100%);
 }
-.middle-section button{
-    background-color: #e44d3a;
+button.publish,.follow{
+    background-color: #2baeed;
     color: white;
     border: none;
     width: 25%;
     height: 2rem;
     border-radius: 5%;
 }
-.middle-section button:hover{
+button.publish:hover,button.follow:hover{
     color: #e44d3a;
-    border: 1px solid #e44d3a;
+    border: 1px solid #2baeed;
     background-color: white;
 }
 
 
-.posts img{
-    /* width: 80%; */
+.post-head{
+
 
 }
 .send-com{
@@ -53,3 +65,15 @@
     right: 2rem;
     top: 0.4rem;
 }
+.followers{
+
+    border-radius: 2%;
+    background: white;
+    color:#2baeed;
+    }
+.like,#commenticon{
+    color: white;
+    background: #2baeed;
+    border: 5px solid #2baeed;
+    border-radius: 50%;
+    }

@@ -12,6 +12,15 @@ class UserRegistrationForm(UserCreationForm):
             "password1",
             "password2"
         ]
+        widgets = {
+            "first_name": forms.TextInput(attrs={"class": "form-control", "placeholder": "First Name"}),
+            "last_name": forms.TextInput(attrs={"class": "form-control", "placeholder": "Last Name"}),
+            "username": forms.TextInput(attrs={"class": "form-control", "placeholder": "Username"}),
+            "email": forms.EmailInput(attrs={"class": "form-control", "placeholder": "Email"}),
+            "password1": forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Password"}),
+            "password2": forms.PasswordInput(attrs={"class": "form-control", "placeholder": "Confirm your password"})
+        }
+
 class LoginForm(forms.Form):
     username=forms.CharField()
     password=forms.CharField(widget=forms.PasswordInput())
@@ -19,7 +28,7 @@ class LoginForm(forms.Form):
 class CreateUserForm(forms.ModelForm):
     class Meta:
         model=UserProfile
-        exclude=('user',)
+        exclude=('user','following',)
         widgets= {
             "date_of_birth" : forms.DateInput(attrs={"type":"date","class":"form-control"}),
             "bio":forms.TextInput(attrs={"class":"form-control"})

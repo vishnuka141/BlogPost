@@ -1,7 +1,7 @@
-{%extends 'base.html'%}
+{%extends 'index.html'%}
 {%block body_block%}
 
-<div class="card" >
+<div class="card mt-5" >
   <img src="{{request.user.users.profile_pic.url}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{request.user}}</h5>
@@ -13,7 +13,7 @@
     <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link"></a>
     <a href="{%url 'update-profile' request.user.users.id %}" class="card-link">Update profile</a>
   </div>
 </div>
